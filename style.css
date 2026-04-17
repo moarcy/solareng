@@ -901,7 +901,10 @@ footer p {
     
     header p {
         text-align: justify;
-        font-size: 1.1rem;
+        font-size: 1rem;
+        hyphens: auto;
+        -webkit-hyphens: auto;
+        text-shadow: 1px 1px 4px rgba(0,0,0,0.7);
     }
     
     .contact-info p {
