@@ -42,6 +42,7 @@
 
 html {
     scroll-behavior: smooth;
+    scroll-padding-top: 110px; /* Garante que as âncoras parem abaixo do nav de vidro */
 }
 
 body {
@@ -887,7 +888,12 @@ footer p {
         color: var(--text-secondary) !important;
     }
 
-    h1 { font-size: 2.8rem; }
+    h1 { 
+        font-size: clamp(2.2rem, 9vw, 2.8rem); 
+        line-height: 1.15;
+        letter-spacing: -0.02em;
+        text-wrap: balance;
+    }
     
     p {
         text-align: justify;
