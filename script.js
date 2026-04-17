@@ -155,4 +155,29 @@ document.addEventListener('DOMContentLoaded', () => {
             }
         });
     });
+
+    // 8. Mobile Navigation Hamburger
+    const hamburger = document.querySelector('.hamburger-menu');
+    const navLinks = document.querySelector('.nav-links');
+
+    if (hamburger && navLinks) {
+        const navIcon = hamburger.querySelector('i');
+        
+        hamburger.addEventListener('click', () => {
+            navLinks.classList.toggle('active');
+            if (navLinks.classList.contains('active')) {
+                navIcon.classList.replace('ph-list', 'ph-x');
+            } else {
+                navIcon.classList.replace('ph-x', 'ph-list');
+            }
+        });
+
+        // Fechar ao clicar em algum link
+        navLinks.querySelectorAll('a').forEach(link => {
+            link.addEventListener('click', () => {
+                navLinks.classList.remove('active');
+                navIcon.classList.replace('ph-x', 'ph-list');
+            });
+        });
+    }
 });
